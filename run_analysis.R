@@ -41,4 +41,4 @@ df <- df %>% mutate(activity = recode(activity,
 tidy_df <- df %>% 
             group_by(subject, activity) %>%
             summarize(across(everything(), mean))
-write.table(tidy_df, "tidy_dataset.txt")
+write.table(tidy_df, "tidy_dataset.txt", row.names = FALSE)
